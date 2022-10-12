@@ -357,85 +357,126 @@ const jsonDatas = {
     }
     , 
     P3C1E1: {
-        h: ""
-        , p: ``
+        h: "Découvrez le modèle 7-1"
+        , p: `Dans cet exercice, entraînez-vous et créez les sept directories du 7-1 pattern via le terminal ou via le panneau de navigation.`
         , sol: ""
         , tasks: {
-            p: ``
+            p: `Nettoyons notre codebase. Notre fichier Sass devient de plus en plus long et scroller commence à devenir pénible. Nous pouvons commencer par mettre en place des dossier organisant notre code selon le pattern 7-1.`
             , ol: [
-
+                `À l'intérieur de sass/ directory, créez des dossiers pour chacune des 7 catégories du pattern 7-1 : Base, Utils, Layout, Components, Pages, Themes et Vendors`,
+                `Vous pouvez le faire en cliquant sur "create directory" et en nommant le nouveau dossier correctement.`,
+                `Ou vous pouvez le faire grâce au terminal :`,
+                `Tout d'abord, changez de dossier pour aller dans le dossier Sass en tapant "cd sass"`,
+                `Ensuite, créez les nouveaux dossiers grâce à la commande mkdir, suivie de la liste des dossiers que vous souhaitez créer.`,
             ]
         }
     }
     , 
     P3C1E2: {
-        h: ""
-        , p: ``
+        h: "Nettoyez et réorganisez vos fichiers"
+        , p: `Dans cet exercice, regroupez les couleurs dans un nouveau fichier.`
         , sol: ""
         , tasks: {
-            p: ``
+            p: `Maintenant que nous avons configuré un dossier structuré, nous pouvons commencer à diviser notre codebase en morceaux plus facilement gérables. Bougeons nos variables dans un autre fichier, appelé partiel en Sass.`
             , ol: [
-
+                `Créez un fichier dans utils/ directory s'appellant _variables.scss. Le préfixe _ est important !`,
+                `Déplacez les variables présentes dans main.scss vers notre nouveau partiel variables.`,
+                `Importez le partiel variables dans main.scss grâce au mot-clé @import et le trajet vers le fichier variables`,
+                `Regardez le rendu de la page. Assurez-vous que tout s'affiche correctement`,
+                `En bonus, créez, complétez et importez les partiels de layout/_form.scss, layout/_nav.scss, layout/_header.scss, utils/mixins.scss, utils/functions.scss, etc`,
             ]
         }
     }
     , 
     P3C2E1: {
-        h: ""
-        , p: ``
+        h: "Découvrez la compilation en mode compressé"
+        , p: `Installez Sass et compilez le code donné en exemple en suivant les étapes vues dans ce chapitre.`
         , sol: ""
         , tasks: {
-            p: ``
+            p: `Donnons de la structure à notre CSS et mettons nos connaissances sur le nesting en pratique. Actuellement, nous avons un sélecteur .parent et un sélecteur .child. Organisons-les pour refléter leur relation en utilisant le nesting sass. Pour cela, plaçons les règles de .child à l'intérieur des règles de .parent`
             , ol: [
-
+                `Dans le terminal, tapez npm init et répondez aux indications comme vous le souhaitez.`,
+                `Dans le terminal, tapez npm install sass -g pour installer Sass dans le système`,
+                `Ajoutez une clé à l'objet "scripts" appelée "sass"`,
+                `Pour les valeurs-clé Sass, écrivez le script qui permet de compiler le CSS dans public/css/styles.css`,
+                `Regardez la console pour vous assurer que Sass re-compile le CSS avec les fichiers Sass sauvegardés.`,
             ]
         }
     }
     , 
     P3C3E1: {
-        h: ""
-        , p: ``
+        h: "Utilisez les mixins avec les maps"
+        , p: `Mettez en application vos nouvelles connaissances dans cet exercice où vous devez conserver les couleurs des boutons, tout en adaptant le code avec les listes et les maps.`
         , sol: ""
         , tasks: {
-            p: ``
-            , ol: [
+            p: `Donnons de la structure à notre CSS en mettant en application nos connaissances des maps. Actuellement, vous avez un sélecteur .btn et trois boutons de couleurs différentes.
 
+            Générons les sélecteurs de nos boutons avec une map !`
+            , ol: [
+                `Déclarez une nouvelle variable appelée $btn-mods et placez des parenthèses qui contiendront les clés map et leurs valeurs`,
+                `Créez une clé appelée "pink" pour le bouton rose modifié et donnez-lui la valeur $color-secondary`,
+                `Créez une clé appelée "blue" pour le bouton bleu modifié et donnez-lui la valeur $color-tertiary`,
+                `Remplacez les valeurs de $color-secondary et $color-tertiary par les valeurs issues de map en utilisant la fonction map-get()`,
+                `Regardez le rendu sur la page pour vous assurer que tous les boutons apparaissent correctement`,
             ]
         }
     }
     , 
     P3C4E1: {
-        h: ""
-        , p: ``
+        h: "Pour chacun et jusqu’au dernier"
+        , p: `Dans l’exercice qui suit, créez une boucle pour générer les couleurs des boutons fournis dans l’exercice.`
         , sol: ""
         , tasks: {
-            p: ``
+            p: `Maintenant que nous avons une palette de nos modificateurs de boutons stockée dans map, économisons du travail en faisant en sorte que Sass génère automatiquement les sélecteurs en se basant sur le contenu de la map $btn-mods`
             , ol: [
-
+                `Stockez votre boucle conditionnelle dans une mixin appelée btn-mods avant un argument pour $map`,
+                `À l'intérieur de la mixin, configurez une boucle @each avec les variables $mod et $val pour le contenu de $map`,
+                `À l'intérieur de la boucle @each, utilisez la syntaxe d'interpolation pour compléter le sélecteur après une esperluette et deux tirets : &--#{$mod}`,
+                `À l'intérieur du sélecteur modificateur, créez une propriété background et donnez-lui la valeur $val`,
+                `Supprimer les sélecteurs &--pink {...} et &--blue {...} et leurs propriétés`,
+                `Incluez les mixin btn-mods à la fin du block .btn, en passant en argument $btn-mods`,
+                `Regardez le CSS compilé. Sass devrait avoir généré les modificateurs btn--pink et btn--blue avec la couleur de fond appropriée`,
+                `Vérifiez le rendu de la page et assurez-vous que les boutons s'affichent avec les bonnes couleurs`,
             ]
         }
     }
     , 
     P3C5E1: {
-        h: ""
-        , p: ``
+        h: "Ajoutez des breakpoints pour une mise en page responsive"
+        , p: `Dans cet exercice,  il vous faut passer en responsive la section image du code fourni, en vous basant sur ce que vous venez d’apprendre.`
         , sol: ""
         , tasks: {
-            p: ``
-            , ol: [
+            p: `Regardons notre page de wireframes. Nous avons un bloc image, un bloc résumé et un bloc texte. Les blocs image et résumé sont au même niveau. L'image prend 60 % de la largeur et le résumé occupe le reste de l'espace grâce à la propriété flex-grow. Le texte se trouve sous ces blocs et occupe 100 % de la largeur.
 
+            Cela semble parfait sur un grand écran. Mais si nous réduisons la taille de l'écran, pour avoir un affichage mobile, les choses se compliquent. Le résumé est sur sa propre ligne, ce qui correspond à ce que nous voulions, mais l'image occupe seulement 60 % de la largeur, ce qui n'est pas ce que nous voulons. Pour rendre l'affichage sur mobile fonctionnel, utilisons les media queries pour passer la largeur de l'image à 100 % quand le navigateur a une largeur inférieure à 600px..`
+            , ol: [
+                `Créez une media query dans le sélecteur .article__image grâce au mot-clé @media`,
+                `Configurez la query pour que la propriété max-width ait une valeur de 599px`,
+                `Ajoutez des accolades { } après la liste de query`,
+                `À l'intérieur des accolades, placez les propriétés à appliquer quand la largeur de la fenêtre de navigateur est inférieure ou égale à 599px, c'est-à-dire configurez la largeur à 100%`,
+                `Regardez le rendu sur la page. Modifiez la taille de la fenêtre du navigateur et assurez vous que l'image change de largeur lorsque le navigateur est inférieur à 600px de largeur`,
+                `Regardez le CSS compilé. En dehors du sélecteur .article__image, il devrait y avoir une media query pour .article__selector ayant une max-width de 559px et une propriété width à 100 %`,
             ]
         }
     }
     , 
     P3C5E2: {
-        h: ""
-        , p: ``
+        h: "Utilisez les breakpoints avec Sass"
+        , p: `Dans l’exercice précédent, vous avez rendu responsive le bloc image ; il est temps de faire de même avec le bloc article !`
         , sol: ""
         , tasks: {
-            p: ``
-            , ol: [
+            p: `Nous avons réglé le problème de la largeur de l'image mais il y a d'autres éléments à prendre en compte pour que notre article soit responsive. L'article en lui-même est un bon point de départ. Il a une largeur de 75% mais comme l'image, nous aimerions qu'il occupe toute la largeur si on le regarde sur un mobile. Nous allons aussi rendre le résumé un peu plus gros en augmentant la taille de la police.
 
+            Nous pourrions créer une autre media query mais en prenant en compte le principe DRY, il serait plus approprié d'élargir la portée de la media query que nous avons faite pour notre image et de la mettre dans une mixin en utilisant la directive @content.`
+            , ol: [
+                `Créez une mixin appellée mobile-only`,
+                `Coupez la media query de .article__image et copiez-la dans la mixin mobile-only`,
+                `Remplacez la propriété width par la directive Sass @content`,
+                `Incluez la mixin mobile-only dans .article__image, en utilisant des accolades pour inclure les règles que vous voulez placer dans la media query de la mixin : width: 100%`,
+                `Faites la même chose pour le sélecteur .article, en configurant sa largeur à 100 %`,
+                `Incluez la mixin mobile-only dans la mixin .article__summary et configurez la police à 1.5rem`,
+                `Examinez la page rendue. Lorsque le navigateur est ramené à une largeur de taille mobile, le bloc d'articles doit occuper 100 % de la largeur de la fenêtre, tout comme l'image. La taille de la police du résumé doit augmenter de 50 % et passer à 1,5rem.`,
+                `Regardez le CSS compilé. Chaque sélecteur qui contient la mixin mobile-only devrait désormais avoir une media query contenant les propriétés que nous avons incluses dans l'instance de la mixin`,
             ]
         }
     }

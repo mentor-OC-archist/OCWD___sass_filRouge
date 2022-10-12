@@ -27,6 +27,34 @@ $btn-mods: (
   blue: $color-tertiary
 );
 
+.btn {
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: $color-accent;
+  background: $color-primary;
+  &--pink {
+    background: $color-secondary;
+  }
+  &--blue {
+    background: $color-tertiary;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*
 @mixin btn-mods($map) {
   @each $mod, $val in $map {
     &--#{$mod} {
@@ -48,3 +76,4 @@ $btn-mods: (
 
   @include btn-mods($btn-mods);
 }
+*/

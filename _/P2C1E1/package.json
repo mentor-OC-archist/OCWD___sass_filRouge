@@ -1,0 +1,12 @@
+{
+  "name": "p1c2e1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/main.scss public/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

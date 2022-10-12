@@ -51,3 +51,41 @@ $color-accent: #FFF;
     padding: 1rem;
   }
 }
+
+
+
+
+
+
+
+
+/*
+.article {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background: $color-tertiary;
+  color: $color-accent;
+  
+  &__image {
+    width: 60%;
+    height: 40vh;
+    background: $color-primary;
+    padding: 1rem;
+
+    @media (max-width: 599px) {
+        width: 100%;
+    }
+  }
+  &__summary {
+    background: $color-secondary;
+    flex-grow: 2;
+    padding: 1rem;
+  }
+  &__body {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+*/

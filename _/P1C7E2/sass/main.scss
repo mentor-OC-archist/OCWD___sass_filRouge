@@ -28,6 +28,30 @@ html, body {
   font-size: 1.5rem;
   color: #fff;
 
+  &--outline {
+    background-color: unset;
+    border: 1px solid #15DEA5;
+    color: #15DEA5;
+  }
+
+  
+}
+
+
+
+
+
+
+/*
+
+.btn {
+  padding: 1.5rem;
+  background: #15DEA5;
+  cursor: pointer;
+  border-radius: 100rem;
+  font-size: 1.5rem;
+  color: #fff;
+
   &--pink {
       background-color: #EA526F;
   }
@@ -45,4 +69,4 @@ html, body {
 
   
 }
-
+*/

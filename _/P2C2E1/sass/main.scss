@@ -21,10 +21,32 @@ html, body {
 
 $color-primary: #15DEA5;
 
+
+
+.btn {
+  padding: 1.5rem;
+  background: $color-primary;
+  cursor: pointer;
+  border-radius: 100rem;
+  font-size: 1.5rem;
+  color: #fff;
+  &--outline {
+    background: transparent;
+    border: .1rem solid $color-primary;
+    color: $color-primary;
+  }
+}
+
+
+
+
+
+
+
+/*
 @mixin border {
     border: .1rem solid $color-primary;
 }
-
 .btn {
   padding: 1.5rem;
   background: $color-primary;
@@ -39,3 +61,4 @@ $color-primary: #15DEA5;
   }
 }
 
+*/

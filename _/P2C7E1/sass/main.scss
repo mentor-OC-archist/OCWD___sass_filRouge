@@ -20,6 +20,27 @@ html, body {
 $color-primary: #15DEA5;
 $color-accent: #FFF;
 
+
+.btn {
+  cursor: pointer;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: $color-accent;
+  background: $color-primary;
+}
+
+
+
+
+
+
+
+
+/*
 @function pastel($clr) {
     $hue: hue($clr);
     $sat: 100%;
@@ -44,3 +65,4 @@ $color-accent: #FFF;
       color: $color-primary;
   }
 }
+*/

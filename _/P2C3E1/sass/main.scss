@@ -29,6 +29,29 @@ $color-secondary: #EA526F;
 // new .form__heading and .proj-prev__heading elements 
 // to .heading-typography.
 
+
+.form {
+  background: $color-primary;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.proj-prev {
+  background: $color-secondary;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*
 .heading-typography {
     font-size: 20px;
     text-transform: uppercase;
@@ -54,3 +77,20 @@ $color-secondary: #EA526F;
       @extend .heading-typography;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+.form,.proj-prev{
+  &__heading{
+    @extend .heading-typography;
+  }
+}
+*/

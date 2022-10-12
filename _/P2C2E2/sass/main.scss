@@ -22,6 +22,52 @@ html, body {
 $color-primary: #15DEA5;
 $color-secondary: #EA526F;
 
+@mixin border {
+  border: .1rem solid $color-primary;
+}
+
+.btn {
+  padding: 1.5rem;
+  background: $color-primary;
+  cursor: pointer;
+  border-radius: 100rem;
+  font-size: 1.5rem;
+  color: #fff;
+  &--outline {
+    background: transparent;
+    @include border;
+    color: $color-primary;
+    &.btn--pink {
+      border: .1rem solid $color-secondary;
+      color: $color-secondary;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+$color-primary: #15DEA5;
+$color-secondary: #EA526F;
+
 @mixin border($color: $color-primary) {
   border: .1rem solid $color;
 }
@@ -44,3 +90,4 @@ $color-secondary: #EA526F;
   }
 }
 
+*/

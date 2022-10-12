@@ -21,6 +21,16 @@ html, body {
 
 /* ¡¡¡Nest your :focus selector below!!!  */
 
+
+
+
+
+
+
+
+
+
+/*
 .input {
   background-color: #19647E;
   outline: none;
@@ -36,3 +46,21 @@ html, body {
       background-color: tomato;
   }
 }
+
+
+
+
+.input {
+  &:focus{background-color: red;}
+  &:hover{background-color: green;}
+  background-color: #19647E;
+  outline: none;
+  border: 1px solid #EA526F;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #EA526F;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+*/

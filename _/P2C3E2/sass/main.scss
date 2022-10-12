@@ -21,6 +21,43 @@ $color-primary: #15DEA5;
 $color-secondary: #EA526F;
 $color-heading: #fff;
 
+
+.heading-typography {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: $color-heading;
+}
+
+
+.form {
+  background: $color-primary;
+  width: 100%;
+  padding: 1rem 2rem;
+  &__heading {
+    @extend .heading-typography;
+  }
+}
+
+.proj-prev {
+  background: $color-secondary;
+  width: 100%;
+  padding: 1rem 2rem;
+  &__heading {
+    @extend .heading-typography;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*
 %heading-typography {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
@@ -46,3 +83,4 @@ $color-heading: #fff;
     @extend %heading-typography;
   }
 }
+*/

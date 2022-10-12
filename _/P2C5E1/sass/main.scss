@@ -17,6 +17,23 @@ html, body {
   flex-wrap: wrap;
 }
 
+$color-primary: #15DEA5;
+
+.form {
+  background: $color-primary;
+  width: 100%;
+  padding: 1rem 2rem;
+  &__heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff
+  }
+}
+
+
+/*
+
 $color-primary: tomato;
 
 .form {
@@ -30,3 +47,4 @@ $color-primary: tomato;
     color: adjust-hue($color: $color-primary, $degrees: 180);
   }
 }
+*/

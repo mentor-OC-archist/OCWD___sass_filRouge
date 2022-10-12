@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOUS LES EXOS DU COURS SASS</title>
+</head>
+
+<body>
+
+
+
+
+    <header>
+        <a href="#" onclick="before()">&lt;</a>
+        <section>
+            <h1 id="h1">Choisir un exercice dans le select ci-dessous (26 exos disponibles</h1>
+            <select id="select">
+                <option selected value="">Choisir un exercice (26)</option>
+            </select>
+        </section>
+        <a href="#" onclick="after()">&gt;</a>
+    </header>
+
+
+    <main>
+
+        <p id="p"></p>
+
+        <hr>
+
+        <p id="tasks_p"></p>
+        <ol id="tasks_ol"></ol>
+        
+        <iframe id="iframe" src="view-source:http://127.0.0.1:5500/index.html" frameborder="0"></iframe>
+        <div class="">
+            <button href="#" onclick="this.parentNode.classList.toggle('show')">
+                <span>Show HTML/SASS codes</span>
+                <span>^</span>
+            </button>
+            <iframe id="iframe_sass" src="" frameborder="0"></iframe>
+            <iframe id="iframe_css" src="" frameborder="0"></iframe>
+        </div>
+    </main>
+
+    <aside>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EYVyajT9gAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </aside>
+
+    <footer>
+        <a title="cours OC: SASS" target="_blank" href="https://openclassrooms.com/fr/courses/6106181-simplifiez-vous-le-css-avec-sass"><img src="https://openclassrooms.com/favicon.ico?e6eb0426" alt="cours OC"></a>
+        <a title="repo du fil rouge du cours" target="_blank" href="https://github.com/tdimnet/Simplifiez-vous-le-CSS-avec-Sass"><img src="./fil_rouge.jpg" alt="repo cours"></a>
+        <a title="repo transformé (this repo)" target="_blank" href="https://github.com/mentor-OC-archist/OCWD___sass_filRouge"><img src="./this_repo.jpg" alt="repo transformé"></a>
+    </footer>
+
+    <style type="text/less">
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:100,900i");
+
+        html,
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        body{
+            >header{
+                display: flex;
+                border-bottom:solid lightskyblue;
+                overflow:hidden;
+                box-shadow: 0 0 10px;
+                &>*{
+                    flex:auto;
+                }
+                h1{
+                    color:goldenrod;
+                    font-size: 2em;
+                }
+                >a{
+                    color:darkblue;
+                    width:50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2em;
+                    text-decoration: none;
+                    &:first-of-type{border-right: solid lightskyblue;}
+                    &:last-of-type{border-left: solid lightskyblue;}
+                    &:hover{background: blueviolet;color:lightskyblue;}
+                    &:active{background: gold;}
+                }
+
+                section{
+                    text-align: center;
+
+                    &>*{width:100%;text-align: center;}
+                    select{
+                        height: 60px;
+                        border:none;
+                        border-top: 1px dotted;
+                        background: rgb(200,200,200);
+                        outline: lightskyblue;
+                    }
+                    h1{}
+                }
+            }
+            >main{
+                padding:50px;
+                >iframe{
+                    width: 90%;
+                    margin: 3em auto 0;
+                    display: block;
+                    min-height: 300px;
+                    box-shadow: 0 0 10px;
+                    border-radius: 5px 5px 0 0;
+                    padding:1em;
+                }
+                >p{
+                    text-align: center;
+                    &#p{color:blueviolet}
+                    &#tasks_p{color:darkblue}
+                }
+                >ol{
+                    color:brown;
+                    font-size: 1.5em;
+                    word-spacing: 10px;
+                    letter-spacing: -2px;
+                }
+                >div{
+                    position: relative;
+                    background: rgba(200,200,200);
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top:30px;
+                    &.show{
+                        >a>span:first-of-type{display:none;}
+                        >a>span:last-of-type{display:inline;}
+                        >iframe{display: block;}
+                    }
+                    &:before{content:"SASS";position:absolute;bottom:0;background:black;color:red;border:solid;z-index:10;left:0;}
+                    &:after{content:"CSS";position:absolute;bottom:0;background:black;color:red;border:solid;z-index:10;right:0;}
+                    >button{
+                        position: absolute;
+                        top:0;left:0;
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        cursor:pointer;
+                        >span:last-of-type{display:none;}
+                    }
+                    >iframe{
+                        width:48%;
+                        min-height: 500px;
+                        display: none;
+                        padding: 1em;
+                        background: whitesmoke;
+                        &:first-of-type{border-right:solid;}
+                        &:last-of-type{border-left:solid;}
+                    }
+                }
+            }
+
+            >aside{
+                iframe{
+                    display: block;
+                    margin: 0 auto;
+                    width: 80%;
+                }
+            }
+
+            >footer{
+                margin-top:300px;
+                border-top: 1px solid;
+                box-shadow: 0 0 10px;
+                display: flex;
+                justify-content: space-around;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="./index.js"></script>
+    <script>
+        let index
+
+        select.focus()
+
+        for(index in jsonDatas){
+            let opt = document.createElement('option')
+            opt.value = index
+            opt.innerHTML = index+": "+jsonDatas[index].h
+            opt.data = jsonDatas[index]
+            console.log(opt.data);
+            select.append(opt)
+        }
+        
+        select.onchange = function(e){
+            // alert(select.selectedIndex)
+            // alert(select.childNodes[select.selectedIndex].value)
+            console.log(select.querySelectorAll('option')[select.selectedIndex]);
+            let opt = select.querySelectorAll('option')[select.selectedIndex]
+
+            iframe.src = "./_/"+select.value
+            iframe_sass.src = "./_/"+e.target.value+"/sass/main.scss"
+            iframe_css.src = "./_/"+select.value+"/public/css/style.css"
+
+            h1.innerHTML = p.innerHTML = tasks_p.innerHTML = tasks_ol.innerHTML = ""
+            h1.innerHTML = opt.data.h
+            p.innerHTML = opt.data.p
+            tasks_p.innerHTML = opt.data.tasks.p
+            opt.data.tasks.ol.map((item) => { 
+                let li = document.createElement('li')
+                li.innerHTML = item
+                tasks_ol.append(li) 
+            })
+
+        }
+    </script>
+</body>
+
+</html>

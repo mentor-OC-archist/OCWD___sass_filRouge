@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="stylesheet" href="./public/css/style_.css">
   <title>P1C5E2: Utilisez des sélecteurs à l’intérieur d’autres sélecteurs : découvrez le nesting !</title>
 </head>
 
@@ -18,4 +19,49 @@
   </div>
 
 
+    <!-- SCSS : style tag -->
+    <style type="text/scss">
+      /* ¡¡¡Commencez à écrire ci-dessous Start writing your Sassy CSS below!!!  */
+      
+      .parent {
+        font-size: 1.5rem;
+        padding: 2rem;
+        background-color: #15DEA5;
+        color: #fff;
+        text-align: center;
+        border-radius: 2rem;
+      }
+      .parent .child {
+        padding: 1rem;
+        background-color: #19647E;
+        margin-top: 1rem;
+        border-radius: 10rem;
+      }
+    </style>
+    <!-- Load this script included sass.js -->
+    <script src="./../../sass.js"></script>
+
+
+
+
+
+  <!-- <style type="text/less">
+    /* ¡¡¡Commencez à écrire ci-dessous Start writing your Sassy CSS below!!!  */
+
+    .parent {
+      font-size: 1.5rem;
+      padding: 2rem;
+      background-color: #15DEA5;
+      color: #fff;
+      text-align: center;
+      border-radius: 2rem;
+    }
+    .parent .child {
+      padding: 1rem;
+      background-color: #19647E;
+      margin-top: 1rem;
+      border-radius: 10rem;
+    }
+  </style>
+  <script src="./less.js"></script> -->
 </body>

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="stylesheet" href="./public/css/style_.css">
   <title>P2C3E2: Utilisez les placeholders</title>
 </head>
 
@@ -20,4 +21,79 @@
     </div>
   </div>
 
+    <!-- SCSS : style tag -->
+    <style type="text/scss">
+      $color-primary: #15DEA5;
+      $color-secondary: #EA526F;
+      $color-heading: #fff;
+      
+      
+      .heading-typography {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        color: $color-heading;
+      }
+      
+      
+      .form {
+        background: $color-primary;
+        width: 100%;
+        padding: 1rem 2rem;
+        &__heading {
+          @extend .heading-typography;
+        }
+      }
+      
+      .proj-prev {
+        background: $color-secondary;
+        width: 100%;
+        padding: 1rem 2rem;
+        &__heading {
+          @extend .heading-typography;
+        }
+      }
+      
+    </style>
+    <!-- Load this script included sass.js -->
+    <script src="./../../sass.js"></script>
+
+
+
+
+
+  <!-- <style type="text/less">
+    $color-primary: #15DEA5;
+    $color-secondary: #EA526F;
+    $color-heading: #fff;
+
+
+    .heading-typography {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      color: $color-heading;
+    }
+
+
+    .form {
+      background: $color-primary;
+      width: 100%;
+      padding: 1rem 2rem;
+      &__heading {
+        @extend .heading-typography;
+      }
+    }
+
+    .proj-prev {
+      background: $color-secondary;
+      width: 100%;
+      padding: 1rem 2rem;
+      &__heading {
+        @extend .heading-typography;
+      }
+    }
+
+  </style>
+  <script src="./less.js"></script> -->
 </body>

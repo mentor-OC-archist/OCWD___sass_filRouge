@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style_.css">
     <title>P2C6E1: Découvrez les conditions</title>
 </head>
 <body>
@@ -13,4 +14,47 @@
     <div class="btn">Survole-moi !!!</div>
   </div>
  
+    <!-- SCSS : style tag -->
+    <style type="text/scss">
+      $color-primary: #15DEA5;
+      $color-secondary: #EA526F;
+      $color-accent: #FFF;
+      
+      .btn {
+        cursor: pointer;
+        padding: 1.5rem 3rem;
+        border-radius: 10rem;
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        color: $color-accent;
+        background: $color-primary;
+      }
+    </style>
+    <!-- Load this script included sass.js -->
+    <script src="./../../sass.js"></script>
+
+
+
+
+
+  <!-- <style type="text/less">
+    $color-primary: #15DEA5;
+    $color-secondary: #EA526F;
+    $color-accent: #FFF;
+
+    .btn {
+      cursor: pointer;
+      padding: 1.5rem 3rem;
+      border-radius: 10rem;
+      font-size: 2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      color: $color-accent;
+      background: $color-primary;
+    }
+  </style>
+  <script src="./less.js"></script> -->
 </body>

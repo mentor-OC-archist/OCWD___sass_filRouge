@@ -1,24 +1,41 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,900i");
-html, body {
-  font-family: "Montserrat", sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
-* {
-  box-sizing: border-box;
-}
+/* ¡¡¡Start refactoring below!!!  */
 
-.container {
-  height: 100%;
+.poll {
+  width: 33%;
+  border: 1px solid #15DEA5;
+  padding: 0.5rem;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-/* ¡¡¡Start refactoring below!!!  */
+.pic {
+  width: 100%;
+  align-self: center;
+}
+
+.opt {
+  width: 40%;
+  cursor: pointer;
+  text-align: center;
+  background: #15DEA5;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.opt-pink {
+  background: #EA526F;
+}
+
+
+
+
+
+
+
+/*
 .poll {
   width: 33%;
   border: 1px solid #15DEA5;
@@ -46,3 +63,4 @@ html, body {
 .poll__opt--pink {
   background: #EA526F;
 }
+*/

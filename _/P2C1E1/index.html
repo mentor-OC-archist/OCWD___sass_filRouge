@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/public/css/style.css">
+  <link rel="stylesheet" href="./public/css/style_.css">
   <title>P2C1E1: Utilisez des variables pour gérer les couleurs</title>
 </head>
 
@@ -16,4 +17,57 @@
     <div class="btn btn--outline btn--pink">Bouton rose encadré</div>
   </div>
 
+    <!-- SCSS : style tag -->
+    <style type="text/scss">
+      .btn {
+        padding: 1.5rem;
+        background: #15DEA5;
+        cursor: pointer;
+        border-radius: 100rem;
+        font-size: 1.5rem;
+        color: #fff;
+        &--pink {
+          background: #EA526F;
+        }
+        &--outline {
+          background: transparent;
+          border: 2px solid #15DEA5;
+          color: #15DEA5;
+          &.btn--pink {
+            border: 2px solid #EA526F;
+            color: #EA526F;
+          }
+        }
+      }
+    </style>
+    <!-- Load this script included sass.js -->
+    <script src="./../../sass.js"></script>
+
+
+
+
+
+  <!-- <style type="text/less">
+    .btn {
+      padding: 1.5rem;
+      background: #15DEA5;
+      cursor: pointer;
+      border-radius: 100rem;
+      font-size: 1.5rem;
+      color: #fff;
+      &--pink {
+        background: #EA526F;
+      }
+      &--outline {
+        background: transparent;
+        border: 2px solid #15DEA5;
+        color: #15DEA5;
+        &.btn--pink {
+          border: 2px solid #EA526F;
+          color: #EA526F;
+        }
+      }
+    }
+  </style>
+  <script src="./less.js"></script> -->
 </body>

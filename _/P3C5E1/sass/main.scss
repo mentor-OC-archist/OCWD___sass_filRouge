@@ -1,22 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,900i');
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
 
 $color-primary: #15DEA5;
 $color-secondary: #EA526F;
@@ -36,10 +18,6 @@ $color-accent: #FFF;
     height: 40vh;
     background: $color-primary;
     padding: 1rem;
-
-    @media (max-width: 599px) {
-        width: 100%;
-    }
   }
   &__summary {
     background: $color-secondary;
